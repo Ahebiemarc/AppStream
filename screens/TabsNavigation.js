@@ -4,6 +4,8 @@ import DataScreen from '../screens/DataScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import CharScreenY from './CharScreenY';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,15 +18,15 @@ const TabsNavigation = () => {
         let iconName;
 
         if (route.name === 'Home') {
-          iconName = 'ios-home';
-        } else if (route.name === 'Profile') {
-          iconName = 'ios-person-outline';
+          iconName = 'chart-line';
+        } else if (route.name === 'DataY') {
+          iconName = 'chart-pie';
         } else if (route.name === 'Settings') {
-          iconName = 'ios-settings';
+          iconName = 'chart-scatter-plot';
         }
 
         // Return an Ionicons icon component
-        return <Icon 
+        return <MaterialCommunityIcons 
         name={iconName} 
         size={/*focused ? size + 10 : */size}
         color={focused ? '#8b8989' : color}/>;
@@ -32,11 +34,11 @@ const TabsNavigation = () => {
     })}
     >
       
-      <Tab.Screen name='Home' component={DataScreen}
+      <Tab.Screen name='Home' component={CharScreenY}
        options={{headerShown: false, tabBarShowLabel: false}}/>
-      <Tab.Screen name='Profile' component={ProfileScreen}  
+      <Tab.Screen name='DataY' component={CharScreenY}  
       options={{headerShown: false, tabBarShowLabel: false}}/>
-      <Tab.Screen name='Settings' component={SettingsScreen}  
+      <Tab.Screen name='Settings' component={CharScreenY}  
       options={{headerShown: false, tabBarShowLabel: false}}/>
     </Tab.Navigator>
   )
