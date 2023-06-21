@@ -6,6 +6,9 @@ import SettingsScreen from '../screens/SettingsScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import CharScreenY from './CharScreenY';
+import SyllosScreen from './SyllosScreen';
+import SingleDataScreen from './SingleDataScreen';
+import ProgressSyllo from '../components/ProgressSyllo';
 
 const Tab = createBottomTabNavigator();
 
@@ -34,11 +37,11 @@ const TabsNavigation = () => {
     })}
     >
       
-      <Tab.Screen name='Home' component={CharScreenY}
+      <Tab.Screen name='Home' component={SyllosScreen}
        options={{headerShown: false, tabBarShowLabel: false}}/>
       <Tab.Screen name='DataY' component={CharScreenY}  
       options={{headerShown: false, tabBarShowLabel: false}}/>
-      <Tab.Screen name='Settings' component={CharScreenY}  
+      <Tab.Screen name='Settings' component={ProgressSyllo}  
       options={{headerShown: false, tabBarShowLabel: false}}/>
     </Tab.Navigator>
   )

@@ -82,7 +82,7 @@ const CharScreenY = () => {
         height={500}
         yAxisLabel=""
         chartConfig={{
-          backgroundGradientFrom: '#f40587',
+          backgroundGradientFrom: '#fff',
           backgroundGradientTo: '#fff',
           decimalPlaces: 0,
           color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
@@ -105,8 +105,10 @@ const CharScreenY = () => {
           marginVertical: 8,
           borderRadius: 16,
         }}
-      />
-    <ScrollView>
+        
+      >
+        
+      </LineChart>
       <View className="flex flex-row flex-wrap ml-[-13px]">
         <Surface className="w-[65px] bg-[#000000]" style={styles.bio}>
             <Title className="text-[8px] text-white">TOTY1</Title>
@@ -141,8 +143,6 @@ const CharScreenY = () => {
         
                      
       </View>
-    </ScrollView>
-
     </SafeAreaView>
   )
 }
